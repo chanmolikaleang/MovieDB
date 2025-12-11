@@ -1,15 +1,16 @@
 import React from "react";
-import Navbar from "./components/Navbar";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LandingPage from "./components/LandingPage";
+import MovieDetails from "./components/MovieDetail";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <LandingPage />
-      {/* <MovieCard /> */}
-      
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/movie/:id" element={<MovieDetails />} />
+      </Routes>
+    </Router>
   );
 }
 

@@ -1,0 +1,23 @@
+.movie-details {
+  display: flex;
+  gap: 20px;
+  padding: 40px;
+  color: #fff;
+}
+
+.movie-details img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.movie-details .details {
+  max-width: 600px;
+}
+
+.movie-details h1 {
+  margin-bottom: 10px;
+}
+
+.movie-details p {
+  margin-bottom: 8px;
+}
