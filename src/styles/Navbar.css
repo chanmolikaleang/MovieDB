@@ -1,0 +1,140 @@
+:root {
+  --clr-primary: #0d253f;
+  --clr-secondary: #01b4e4;
+  --clr-white: #ffffff;
+}
+/* ----------- HEADER ----------- */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem 2rem;
+  background: var(--clr-primary);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+/* Logo */
+.company-logo {
+  height: 1.6rem;
+  width: auto;
+}
+
+/* Buttons */
+.button {
+  padding: 0.4rem 0.8rem;
+  color: var(--clr-white);
+  background-color: var(--clr-secondary);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.button:hover {
+  background-color: #019ed9; /* slightly darker on hover */
+}
+
+/* Centered menu */
+.nav-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-center ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-link {
+  color: var(--clr-white);
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: var(--clr-secondary);
+  transition: color 0.2s ease;
+}
+/* Right buttons */
+.nav-right {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  padding-right: 4rem;
+}
+
+/* HAMBURGER MENU (mobile) */
+.nav-toggle-label {
+  display: none;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+/* MOBILE VIEW */
+@media screen and (max-width: 799px) {
+  header {
+    justify-content: space-between;
+  }
+
+  nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--clr-primary);
+    flex-direction: column;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.35s ease-in-out;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.5rem 0;
+  }
+
+  .nav-toggle:checked ~ nav {
+    transform: scaleY(1);
+  }
+
+  .nav-toggle-label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .nav-toggle-label span,
+  .nav-toggle-label span::before,
+  .nav-toggle-label span::after {
+    display: block;
+    background: var(--clr-white);
+    height: 2px;
+    width: 26px;
+    border-radius: 2px;
+    position: relative;
+  }
+
+  .nav-toggle-label span::before {
+    content: '';
+    position: absolute;
+    bottom: 7px;
+  }
+
+  .nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+    top: 7px;
+  }
+}
