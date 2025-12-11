@@ -10,7 +10,7 @@
 /* Slideshow background */
 .slideshow-background {
   position: absolute;
-  top: 0;
+  top: 40px;
   left: 0;
   width: 100%;
   height: 450px;
@@ -87,7 +87,7 @@
 .trending-wrapper {
   position: relative;
   z-index: 3;
-  margin-top: 480px;      /* push under slideshow */
+  margin-top: 500px;      /* push under slideshow */
   padding: 20px;
   background: rgba(0, 0, 0, 0.7);
 }
